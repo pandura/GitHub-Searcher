@@ -1,0 +1,126 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: $colorHeader;
+  display: flex;
+  justify-content: space-around;
+  .header-logo {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    .logo {
+      font-size: 2.5rem;
+      color: white;
+    }
+    small {
+      font-size: 1.5rem;
+      margin-left: 1rem;
+      color: white;
+    }
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    position: relative;
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      @include mobile {
+        display: block;
+      }
+      @include talbet {
+        display: none;
+      }
+    }
+    .hamburger-close {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      @include mobile {
+        display: none;
+      }
+    }
+    .header-box {
+      display: flex;
+      justify-content: space-around;
+      @include mobile {
+        background-color: white;
+        display: none;
+        position: absolute;
+        top: 4.5rem;
+        right: -28px;
+        width: 90%;
+        height: 20vh;
+      }
+      .header-input {
+        background-color: $colorHeaderInput;
+        background-image: url('./../../assets/search-key-github.png');
+        background-size: 1.6rem;
+        background-repeat: no-repeat;
+        background-position: 97%;
+        border: none;
+        width: 45%;
+        font-size: 1.3rem;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+        margin-right: 0.6rem;
+        &:focus {
+          background-color: white;
+          background-image: none;
+          &::placeholder {
+            color: transparent;
+          }
+        }
+        @include mobile {
+          position: absolute;
+          top: 0.5rem;
+          right: 1rem;
+          background: white;
+          border: 1px solid grey;
+          width: 85%;
+          background-image: url('./../../assets/search-key-github.png');
+          background-repeat: no-repeat;
+          background-size: 1.6rem;
+          background-repeat: no-repeat;
+          background-position: 97%;
+        }
+      }
+      .header-nav-list {
+        display: flex;
+        font-size: 1.1rem;
+        width: 40%;
+        li {
+          padding: 0.6rem;
+          margin-left: 0.5rem;
+          & a:hover {
+            transition: color 0.2s ease;
+            color: $colorBtnHover;
+          }
+          &:last-of-type {
+            border: 1px solid white;
+            border-radius: 0.2rem;
+            @include mobile {
+              border: 1px solid $colorHeaderInput;
+            }
+          }
+          @include mobile {
+            a {
+              color: $colorHeaderInput;
+            }
+          }
+        }
+        @include mobile {
+          width: 85%;
+          position: absolute;
+          top: 4rem;
+          left: 0;
+        }
+      }
+    }
+  }
+}

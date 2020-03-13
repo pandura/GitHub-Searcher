@@ -1,0 +1,109 @@
+.signUp {
+  position: relative;
+  background-image: url('../../assets/background-github.png');
+  min-height: 90vh;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $colorBackground;
+    z-index: -1;
+  }
+  .signUp-container {
+    padding-top: 8rem;
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include mobile {
+      flex-direction: column;
+    }
+    .signUp-left {
+      width: 50%;
+      @include mobile {
+        width: 80%;
+      }
+      .signUp-left-h2 {
+        color: white;
+        font-size: 4rem;
+        @include mobile {
+          font-size: 3rem;
+        }
+      }
+
+      .signUp-left-text {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        color: $colorBtnHover;
+      }
+    }
+    .signUp-right {
+      padding: 2rem;
+      background-color: $colorBackgroundLogin;
+      border-radius: 0.3rem;
+      width: 35%;
+      position: relative;
+      @include mobile {
+        width: 90%;
+        margin: 2rem 0;
+      }
+      .signUp-right-alert {
+        width: 10rem;
+        position: absolute;
+        top: -0.8rem;
+        right: 6.7rem;
+        @include mobile {
+          right: 4.5rem;
+        }
+        .signUp-alert {
+          background-color: $colorAlert;
+
+          padding: 0.3rem;
+          // border: 1px solid lightgrey;
+          border-radius: 0.3rem;
+          text-align: center;
+          color: $colorAlertText;
+        }
+      }
+      .signUp-form {
+        display: flex;
+        flex-direction: column;
+        label {
+          font-size: 0.9rem;
+          font-weight: 600;
+          margin-bottom: 0.6rem;
+        }
+        input {
+          background-color: $colorBackgroundLogin;
+          font-size: 1rem;
+          height: 2.3rem;
+          border-radius: 0.2rem;
+          border: 1px solid lightgray;
+          &:not(:last-of-type) {
+            margin-bottom: 1.2rem;
+          }
+          &:focus {
+            border: 3px solid lightblue;
+          }
+        }
+        .signUp-condition {
+          font-size: 0.8rem;
+          margin-top: 0.3rem;
+          margin-bottom: 1.5rem;
+        }
+        .sightUp-btn {
+          display: block;
+          background-color: $colorBtnMainPage;
+          color: white;
+          padding: 1.3rem;
+          border: 1px solid grey;
+          border-radius: 0.2rem;
+        }
+      }
+    }
+  }
+}

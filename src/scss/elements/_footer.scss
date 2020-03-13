@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  // justify-content: space-around;
+  .footer-text {
+    margin: 0.5rem 0;
+  }
+  .logo-footer {
+    color: lightgray;
+    font-size: 2rem;
+  }
+}

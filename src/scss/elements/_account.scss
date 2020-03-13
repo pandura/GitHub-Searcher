@@ -1,0 +1,119 @@
+.account {
+  background-color: $colorBackgroundLogin;
+  padding-top: 9rem;
+  .account-container {
+    width: 80%;
+    min-height: 70vh;
+    margin: 0 auto;
+    position: relative;
+    .add-user-btn {
+      padding: 0.5rem 0.6rem;
+      background-color: $colorBtnMainPage;
+      border-radius: 0.5rem;
+
+      &:hover {
+        color: $colorBtnHover;
+      }
+    }
+    .account-alert {
+      position: absolute;
+      top: 2rem;
+      right: 50%;
+      transform: translateX(50%);
+      @include mobile {
+        top: 5rem;
+        right: 50%;
+      }
+      .account-alert-success {
+        background-color: $colorBtnMainPage;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.4rem;
+        font-size: 1.1rem;
+      }
+      .greetings-alert {
+        background-color: $colorBtnMainPage;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.4rem;
+        font-size: 1.1rem;
+      }
+    }
+    .account-h2 {
+      margin: 2rem 0;
+
+      @include mobile {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+    }
+    .account-list {
+      .account-list-element {
+        border-bottom: 1px solid grey;
+        display: grid;
+        grid-template-columns: 10% 19% 12% 42% 6% 5%;
+        grid-template-rows: auto;
+        align-items: center;
+        grid-gap: 1rem;
+        @include mobile {
+          display: flex;
+          flex-direction: column;
+          margin: 2rem 0;
+        }
+        .account-user-img {
+          width: 60px;
+          border-radius: 50%;
+          margin-right: 2rem;
+          @include mobile {
+            margin: 0 auto;
+          }
+        }
+        p {
+          font-size: 1.2rem;
+          @include mobile {
+            margin-bottom: 1rem;
+          }
+        }
+        .account-input {
+          border: 1px solid $colorBtnMainPage;
+          width: 80%;
+          margin-left: 1.5rem;
+          @include mobile {
+            width: 60%;
+            margin-left: 0.1rem;
+          }
+        }
+        .text-input {
+          margin-left: 1.5rem;
+          @include mobile {
+            margin-left: 0.1rem;
+          }
+        }
+        a {
+          position: relative;
+          margin-left: 2rem;
+          @include mobile {
+            margin: 1rem 0;
+          }
+          i {
+            color: $colorAlertText;
+          }
+          .delete {
+            display: none;
+            color: $colorAlertText;
+            position: absolute;
+            top: -15px;
+            right: 5px;
+            @include mobile {
+              top: -16px;
+              right: -14px;
+            }
+          }
+          &:hover .delete {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+}

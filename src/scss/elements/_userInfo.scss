@@ -1,0 +1,155 @@
+.user-info {
+  padding: 6rem 0 3rem 2rem;
+  background-color: $colorBackgroundLogin;
+
+  .user-info-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: $colorBtnMainPage;
+    border-radius: 0.5rem;
+
+    &:hover {
+      color: $colorBtnHover;
+    }
+  }
+  .user-info-card {
+    margin: 3rem auto;
+    border: black 1px dotted;
+    width: 70%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .user-info-card-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      @include mobile {
+        width: 100%;
+      }
+      .user-info-card-p {
+        margin: 1rem 0 0.5rem 0;
+      }
+      .user-info-card-hireable {
+        margin: 1rem 0;
+        .fa-check {
+          color: $colorBtnMainPage;
+        }
+        .fa-times {
+          color: $colorAlertText;
+        }
+      }
+      .user-info-card-img {
+        width: 12rem;
+        border-radius: 50%;
+      }
+      .user-info-card-btn {
+        padding: 0.5rem 1.5rem;
+        background-color: $colorBtnMainPage;
+        border-radius: 0.5rem;
+        margin: 0.5rem 0;
+        &:hover {
+          color: $colorBtnHover;
+        }
+      }
+    }
+    .user-info-card-right {
+      .user-info-card-right-btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 2rem;
+        position: relative;
+        @include mobile {
+          justify-content: center;
+        }
+        .user-alert-danger {
+          position: absolute;
+          color: $colorAlertText;
+          top: 40px;
+          right: 13px;
+          background-color: $colorAlert;
+          padding: 0.3rem 1rem;
+          border-radius: 0.4rem;
+          @include mobile {
+            top: 40px;
+            right: 37px;
+          }
+        }
+        .user-alert-success {
+          position: absolute;
+          top: 40px;
+          right: 55px;
+          background-color: $colorBtnMainPage;
+          color: white;
+          padding: 0.3rem 1rem;
+          border-radius: 0.4rem;
+          @include mobile {
+            top: 40px;
+            right: 75px;
+          }
+        }
+        .user-info-card-right-fallow {
+          padding: 0.5rem 1.5rem;
+          background-color: $colorBtnAddUser;
+          border-radius: 0.5rem;
+          font-size: 1.2rem;
+          border: none;
+          cursor: pointer;
+          .fa-plus {
+            color: $colorBtnMainPage;
+          }
+          &:hover {
+            color: $colorBtnHover;
+          }
+        }
+      }
+      .user-info-card-bio {
+        .user-info-card-bio-h3 {
+          margin: 1rem 0;
+        }
+      }
+      .user-info-card-bio-data {
+        margin-top: 1rem;
+        h4 {
+          margin: 1.5rem 0 1rem 0;
+        }
+        ul {
+          li {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+      .user-info-card-bio-data-social {
+        margin-top: 3rem;
+
+        ul {
+          display: flex;
+          justify-content: space-around;
+
+          li {
+            display: block;
+            padding: 0.5rem;
+            color: white;
+            border-radius: 0.5rem;
+            @include mobile {
+              font-size: 0.8rem;
+              width: 32%;
+              text-align: center;
+            }
+          }
+          .red {
+            background-color: $colorAlertText;
+          }
+          .green {
+            background-color: $colorBtnMainPage;
+          }
+          .blue {
+            background-color: blue;
+          }
+        }
+      }
+    }
+  }
+}

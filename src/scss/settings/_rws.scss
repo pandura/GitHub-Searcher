@@ -1,0 +1,10 @@
+@mixin talbet {
+  @media (min-width: 700px) and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 700px) {
+    @content;
+  }
+}

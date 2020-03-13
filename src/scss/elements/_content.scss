@@ -1,0 +1,87 @@
+.content-error {
+  margin: 7rem 0;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.content {
+  position: relative;
+  background-image: url('../../assets/background-github.png');
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $colorBackground;
+    z-index: -1;
+  }
+  .content-spinner {
+    padding-bottom: 4rem;
+  }
+  .content-alert {
+    margin-bottom: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    padding-top: 5.5rem;
+    padding-bottom: 1rem;
+    .alert {
+      background-color: $colorAlert;
+      color: $colorAlertText;
+      display: block;
+      padding: 0.7rem 0;
+      border-radius: 0.3rem;
+      border: none;
+      width: 20rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .alert-logout {
+      background-color: $colorBtnMainPage;
+      color: white;
+      display: block;
+      padding: 0.7rem 0;
+      border-radius: 0.3rem;
+      border: none;
+      width: 20rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  .content-users {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .user {
+      text-align: center;
+      padding: 1rem;
+      border: white 1px dotted;
+
+      margin: 0.7rem 0;
+      .user-img {
+        width: 100px;
+      }
+      .user-name {
+        margin: 1.5rem 0;
+        font-size: 1.5rem;
+        color: $colorNameUser;
+      }
+      .user-btn {
+        padding: 0.5rem 1.5rem;
+        background-color: $colorBtnMainPage;
+        border-radius: 0.5rem;
+        color: white;
+        &:hover {
+          color: $colorBtnHover;
+        }
+      }
+    }
+  }
+}
