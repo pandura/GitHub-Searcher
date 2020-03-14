@@ -6,6 +6,8 @@ const Navbar = props => {
   let history = useHistory();
   let textInput = null;
   const { query, alert, loginUser, logout } = props;
+  let hamburgerElement = null;
+  let closeElement = null;
 
   const handleDownKey = event => {
     if (event.keyCode === 13) {
@@ -22,12 +24,11 @@ const Navbar = props => {
     logout();
     alert('You have logged out', 'alert-logout');
   };
-  const mobileMenu = event => {
-    event.preventDefault();
+  const mobileMenu = () => {
     const boxMenu =
-      event.target.parentElement.previousElementSibling.previousElementSibling;
-    const close = event.target.parentElement.previousElementSibling;
-    const hamburger = event.target.parentElement;
+      hamburgerElement.previousElementSibling.previousElementSibling;
+    const close = hamburgerElement.previousElementSibling;
+    const hamburger = hamburgerElement;
     if (boxMenu.style.display === 'block') {
       boxMenu.style.display = 'none';
     } else {
@@ -36,10 +37,10 @@ const Navbar = props => {
       hamburger.style.display = 'none';
     }
   };
-  const mobileClose = event => {
-    event.target.parentElement.style.display = 'none';
-    event.target.parentElement.previousElementSibling.style.display = 'none';
-    event.target.parentElement.nextElementSibling.style.display = 'block';
+  const mobileClose = () => {
+    closeElement.style.display = 'none';
+    closeElement.previousElementSibling.style.display = 'none';
+    closeElement.nextElementSibling.style.display = 'block';
   };
 
   return (
@@ -86,13 +87,19 @@ const Navbar = props => {
           </ul>
         </div>
         <Link
+          ref={e => (closeElement = e)}
           onClick={event => mobileClose(event)}
           to='#'
           className='hamburger-close'
         >
           <i className='fas fa-times'></i>
         </Link>
-        <Link onClick={event => mobileMenu(event)} to='#' className='hamburger'>
+        <Link
+          ref={e => (hamburgerElement = e)}
+          onClick={event => mobileMenu(event)}
+          to='#'
+          className='hamburger'
+        >
           <i className='fas fa-bars'></i>
         </Link>
       </nav>
