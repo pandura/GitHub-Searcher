@@ -32,9 +32,12 @@ const AccountUser = props => {
   };
   return (
     <li id={user.id} className='account-list-element'>
-      <Link to={`/user/${user.login}`}>
-        <img className='account-user-img' src={user.avatar_url} alt='' />
-      </Link>
+      <div className='backgrondImg'>
+        <Link to={`/user/${user.login}`}>
+          <img className='account-user-img' src={user.avatar_url} alt='' />
+        </Link>
+      </div>
+
       <p>
         <strong>Name:</strong> {user.name ? user.name : user.login}
       </p>
@@ -59,6 +62,7 @@ const AccountUser = props => {
       </p>
       {edit ? (
         <button
+          className='btnInput'
           onClick={() => {
             setEdit(false);
             saveEditedText();
@@ -67,7 +71,9 @@ const AccountUser = props => {
           Save note
         </button>
       ) : (
-        <button onClick={() => setEdit(true)}>Edit note</button>
+        <button className='btnInput' onClick={() => setEdit(true)}>
+          Edit note
+        </button>
       )}
       <Link to='#' onClick={deleteUser}>
         <i className='fas fa-times delete-user'></i>

@@ -1,3 +1,22 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": 1,
+      "login": "raid1908",
+      "name": null,
+      "avatar_url": "https://avatars1.githubusercontent.com/u/54274086?v=4",
+      "location": null,
+      "bio": null,
+      "company": null,
+      "blog": "",
+      "html_url": "https://github.com/raid1908",
+      "email": null,
+      "followers": 0,
+      "following": 0,
+      "public_repos": 3,
+      "hireable": null,
+      "created_at": "2019-08-19T12:27:31Z",
+      "note": ""
+    }
+  ]
 }

@@ -8,12 +8,12 @@
     align-items: center;
     .login-logo {
       font-size: 3rem;
-      color: black;
+      color: $colorBlack;
     }
     .login-small {
       margin: 2rem 0 1rem 0;
       font-size: 1.5rem;
-      color: grey;
+      color: $colorHeaderInput;
     }
     .login-alert-box {
       width: 20%;
@@ -24,17 +24,16 @@
         background-color: $colorAlert;
         margin-bottom: 1rem;
         padding: 0.5rem;
-        // border: 1px solid lightgrey;
         border-radius: 0.3rem;
         text-align: center;
         color: $colorAlertText;
       }
     }
     .login-box {
-      background-color: white;
+      background-color: $colorWhite;
       padding: 1.5rem;
       width: 20%;
-      border: 1px solid lightgrey;
+      border: 1px solid $colorLightGray;
       border-radius: 0.4rem;
       @include mobile {
         width: 70%;
@@ -52,25 +51,30 @@
           font-size: 1rem;
           height: 2rem;
           border-radius: 0.2rem;
-          border: 1px solid lightgray;
+          border: 1px solid $colorLightGray;
           &:focus {
-            border: 3px solid lightblue;
+            border: 3px solid $colorLightBlue;
           }
         }
         .login-btn {
           display: block;
           background-color: $colorBtnMainPage;
-          color: white;
+          color: $colorWhite;
           padding: 0.7rem;
-          border: 1px solid grey;
+          border: 1px solid $colorBtnAddUser;
           border-radius: 0.2rem;
+          cursor: pointer;
+          &:hover {
+            transition: color 0.2s ease;
+            color: $colorBtnHover;
+          }
         }
       }
     }
     .login-create-account {
       padding: 1rem 0;
       margin: 2rem 0 3rem 0;
-      border: 1px solid lightgrey;
+      border: 1px solid $colorLightGray;
       border-radius: 0.4rem;
       width: 20%;
       display: flex;
@@ -83,7 +87,10 @@
         margin-right: 0.5rem;
       }
       a {
-        color: blue;
+        color: $colorBtnblue;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

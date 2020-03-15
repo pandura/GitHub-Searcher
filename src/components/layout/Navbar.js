@@ -17,7 +17,7 @@ const Navbar = props => {
         alert('Please enter user name!', 'alert');
       }
       textInput.value = '';
-      history.push('/');
+      history.push(`/`);
     }
   };
   const logoutUser = () => {

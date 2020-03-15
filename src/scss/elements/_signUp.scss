@@ -28,7 +28,7 @@
         width: 80%;
       }
       .signUp-left-h2 {
-        color: white;
+        color: $colorWhite;
         font-size: 4rem;
         @include mobile {
           font-size: 3rem;
@@ -63,7 +63,6 @@
           background-color: $colorAlert;
 
           padding: 0.3rem;
-          // border: 1px solid lightgrey;
           border-radius: 0.3rem;
           text-align: center;
           color: $colorAlertText;
@@ -82,12 +81,12 @@
           font-size: 1rem;
           height: 2.3rem;
           border-radius: 0.2rem;
-          border: 1px solid lightgray;
+          border: 1px solid $colorLightGray;
           &:not(:last-of-type) {
             margin-bottom: 1.2rem;
           }
           &:focus {
-            border: 3px solid lightblue;
+            border: 3px solid $colorLightBlue;
           }
         }
         .signUp-condition {
@@ -98,10 +97,15 @@
         .sightUp-btn {
           display: block;
           background-color: $colorBtnMainPage;
-          color: white;
+          color: $colorWhite;
           padding: 1.3rem;
-          border: 1px solid grey;
+          border: 1px solid $colorLightGray;
           border-radius: 0.2rem;
+          cursor: pointer;
+          &:hover {
+            transition: color 0.2s ease;
+            color: $colorBtnHover;
+          }
         }
       }
     }

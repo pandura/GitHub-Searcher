@@ -10,14 +10,17 @@
     padding: 1rem 0;
     display: flex;
     align-items: center;
+    @include mobile {
+      margin-left: 2rem;
+    }
     .logo {
       font-size: 2.5rem;
-      color: white;
+      color: $colorWhite;
     }
     small {
       font-size: 1.5rem;
       margin-left: 1rem;
-      color: white;
+      color: $colorWhite;
     }
   }
   .header-nav {
@@ -25,22 +28,26 @@
     align-items: center;
     justify-content: flex-end;
     width: 50%;
-    position: relative;
+    // position: relative;
+    @include mobile {
+      margin-right: 2rem;
+      width: 40%;
+    }
     .hamburger {
       display: none;
       font-size: 1.5rem;
-      color: white;
+      color: $colorWhite;
       @include mobile {
         display: block;
       }
-      @include talbet {
+      @include tablet {
         display: none;
       }
     }
     .hamburger-close {
       display: none;
       font-size: 1.5rem;
-      color: white;
+      color: $colorWhite;
       @include mobile {
         display: none;
       }
@@ -49,13 +56,13 @@
       display: flex;
       justify-content: space-around;
       @include mobile {
-        background-color: white;
+        background-color: $colorWhite;
         display: none;
         position: absolute;
         top: 4.5rem;
-        right: -28px;
-        width: 90%;
-        height: 20vh;
+        right: 0px;
+        width: 45%;
+        height: 7rem;
       }
       .header-input {
         background-color: $colorHeaderInput;
@@ -70,7 +77,7 @@
         border-radius: 0.2rem;
         margin-right: 0.6rem;
         &:focus {
-          background-color: white;
+          background-color: $colorWhite;
           background-image: none;
           &::placeholder {
             color: transparent;
@@ -79,10 +86,10 @@
         @include mobile {
           position: absolute;
           top: 0.5rem;
-          right: 1rem;
-          background: white;
+          right: -0.3rem;
+          background: $colorWhite;
           border: 1px solid grey;
-          width: 85%;
+          width: 95%;
           background-image: url('./../../assets/search-key-github.png');
           background-repeat: no-repeat;
           background-size: 1.6rem;
@@ -102,7 +109,7 @@
             color: $colorBtnHover;
           }
           &:last-of-type {
-            border: 1px solid white;
+            border: 1px solid $colorWhite;
             border-radius: 0.2rem;
             @include mobile {
               border: 1px solid $colorHeaderInput;
@@ -115,10 +122,10 @@
           }
         }
         @include mobile {
-          width: 85%;
+          width: 100%;
           position: absolute;
           top: 4rem;
-          left: 0;
+          left: 1rem;
         }
       }
     }

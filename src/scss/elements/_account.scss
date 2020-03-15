@@ -26,14 +26,14 @@
       }
       .account-alert-success {
         background-color: $colorBtnMainPage;
-        color: white;
+        color: $colorWhite;
         padding: 0.5rem 1.5rem;
         border-radius: 0.4rem;
         font-size: 1.1rem;
       }
       .greetings-alert {
         background-color: $colorBtnMainPage;
-        color: white;
+        color: $colorWhite;
         padding: 0.5rem 1.5rem;
         border-radius: 0.4rem;
         font-size: 1.1rem;
@@ -49,7 +49,7 @@
     }
     .account-list {
       .account-list-element {
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid $colorBtnAddUser;
         display: grid;
         grid-template-columns: 10% 19% 12% 42% 6% 5%;
         grid-template-rows: auto;
@@ -60,12 +60,25 @@
           flex-direction: column;
           margin: 2rem 0;
         }
-        .account-user-img {
-          width: 60px;
-          border-radius: 50%;
-          margin-right: 2rem;
+        .backgrondImg {
+          height: 70px;
           @include mobile {
-            margin: 0 auto;
+            height: 110px;
+          }
+          .account-user-img {
+            width: 60px;
+            border-radius: 50%;
+            margin-right: 2rem;
+            &:hover {
+              width: 65px;
+            }
+            @include mobile {
+              margin: 0 auto;
+              width: 100px;
+              &:hover {
+                width: 110px;
+              }
+            }
           }
         }
         p {
@@ -88,6 +101,9 @@
           @include mobile {
             margin-left: 0.1rem;
           }
+        }
+        .btnInput {
+          cursor: pointer;
         }
         a {
           position: relative;
